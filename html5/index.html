@@ -1,0 +1,83 @@
+<!--REMEMBERING STRUCTURE, TAGS, FORMS-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relembrando conceitos e principios HTML5</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <header>
+        <!--CABEÇALHO-->
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li>|</li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li>|</li>
+                <li><a href="#contato">Contato</a></li>
+                <li>|</li>
+                <li><a href="#projetos">Projetos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <h1>Seja bem-vindo a minha página</h1>
+
+        </section>
+        <section id="sobre">
+            <h2>Sobre mim</h2>
+            <br>
+            <div id="introducao">
+                <p>Comecei a programar com dificuldades. </p>
+                <p>Mas cada erro me ensinou algo novo e me impulsionou a seguir em frente.</p>
+            </div >
+            
+            <div id="desenvolvimento">
+                <p>Programar é mais que código; é resolver problemas e transformar ideias em realidade, impactando o mundo.</p>
+            </div>
+            
+            <div id="conclusao">
+                <p>A programação se tornou uma paixão, me desafia e motiva a continuar evoluindo.</p>
+                <p> A jornada está só começando.</p>
+            </div>
+        </section>
+        <section id="contato">
+            <h2>Meus Contatos</h2>
+            <!--LINKS DE CONTATO-->
+            <a href="mailto:augustofelipemf45@gmail.com">augustofelipemf45@gmail.com</a><br>
+            <a href="https://github.com/AugustoMoraes07" target="_blank">Github:AugustoMoraes07</a><br>
+            <a href="https://www.linkedin.com/in/augusto-felipe-a7bb66316/" target="_blank">Linkedin:AugustoFelipe</a>
+            
+            <br><br>
+
+            <!--RELEMBRANDO FORM-->
+            <form action="https://formsubmit.co/augustofelipemf45@gmail.com" autocomplete="on" method="post" target="_blank">
+                <fieldset>
+                    <legend>Envie uma mensagem</legend>
+                    <p>
+                        <label for="em1">Digite seu email: </label><br>
+                        <input type="email" name="em" id="em1" autocomplete="email" required><br><br>
+                        
+                        <label for="msg1">Sua mensagem:</label><br>
+                        <textarea name="msg" id="msg1" required placeholder="Escreva aqui..." minlength="1" maxlength="600" rows="5" cols="30"></textarea><br><br>
+                
+                        <input type="submit" value="Enviar">
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+        <!--
+            <section class="projetos">
+                    <a href="https://github.com/AugustoMoraes07">Login</a>
+            </section>
+        -->
+    </main>
+    <footer>
+        <!--RODAPÉ-->
+        <p>&copy; <a href="https://github.com/AugustoMoraes07" >AUGUSTOMORAES07</a> Todos os direitos reservados</p>
+    </footer>
+</body>
+</html>

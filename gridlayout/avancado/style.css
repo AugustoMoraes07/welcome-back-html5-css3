@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html,body{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "sidebar main aside"
+    "footer footer footer";
+    gap: 20px;
+    grid-template-columns: 150px 0.8fr 0.2fr;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+header,nav,main,aside,footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header{
+    height: 100px;
+    background-color: gray;
+    grid-area: header;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px;
+}
+nav{
+    grid-area: sidebar;
+    padding: 20px;
+    color: white;
+    background-color: darkgreen;
+    border-radius: 20px;
+}
+nav:hover{
+    background-color: rgb(2, 167, 2);
+    box-shadow: 0px 0px 10px black;
+}
+main{
+    padding: 20px;
+    color: white;
+    background-color: darkred;
+    grid-area: main;
+    border-radius: 20px;
+}
+main:hover{
+    background-color: rgb(209, 2, 2);
+    box-shadow: 0px 0px 10px black;
+
+    transition: background-color 0.3s ease;
+}
+aside{
+    grid-area: aside;
+    color: white;
+    border-radius: 20px;
+    padding:20px;
+    background-color: darkcyan;
+}
+aside:hover{
+    background-color: rgb(0, 179, 179);
+    box-shadow: 0px 0px 10px black;
+    transition: background-color 0.3s ease;
+}
+footer{
+    font-weight: bold;
+    padding: 15px;
+    background-color: gray;
+    grid-area: footer;
+}
+
+@media (max-width: 768px){
+    .grid-container{
+        grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "aside"
+        "footer";
+        grid-template-columns: 1fr;
+    }
+
+    nav,main,aside{
+    justify-self: center;
+
+    }
+
+    header{height: 10vh;}
+    nav{height: 20vh;width: 80vw;}
+    main{height: 40vh;width: 80vw;}
+    aside{height: 20vh;width: 80vw;}
+    footer{height: 10vh;}
+}
