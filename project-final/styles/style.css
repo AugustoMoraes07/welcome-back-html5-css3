@@ -23,10 +23,15 @@ Verde Menta	#10B981	Cor de apoio (destaques positivos, benefícios)*/
     font-family: Arial, Helvetica, sans-serif;
 }
 
+html{
+    scroll-behavior: smooth; /*scrool suave*/
+}
+
 html,body{
-    height: 100vh;
-    width: 100vw;
+    min-height: 100vh;
+    width: 100%;
     overflow-x: hidden;
+    background-color:var(--fundogeral);
 }
 
 .container{
@@ -46,19 +51,23 @@ a{
     text-decoration: none;
 }
 
+nav{
+    height: 100%;
+    width: 100%;
+}
+
 ul{
+    height: 100%;
     display: flex;
     flex-flow: row nowrap;
     list-style-type: none;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
 
 
 header{
-    
-    height: 8vh;
-    padding: 20px;
+    min-height: 8vh;
     grid-area: header;
     font-weight: bold;
     background-color: var(--fundogeral);
@@ -66,22 +75,19 @@ header{
 }
 header a{
     color: var(--cor-principal);
-    margin: 40px;
+    padding: 10px;
 }
 header a:hover{
     color: white;
-    padding: 15px;
     border-radius: 10px;
     background-color: var(--destaque);
     box-shadow: 0px 0px 2px black;
-    transition: all 0.3s ease;
 }
 
 
 main{
     color: var(--texto-icones);
     text-shadow: 0px 1px 1px rgba(46, 46, 46, 0.658);
-    height: 90vh;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-around;
@@ -93,25 +99,111 @@ main>p{
     font-size: 1.2rem;
     text-align: justify;
 }
-#hero,#benefits,#testimonials{
+#benefits,#testimonials{
+    margin: 60px 0px;
+    padding: 20px;
     background-color: var(--fundogeral);
+    border-radius: 20px;
 }
 
 #hero{
     grid-area: hero;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--texto-icones);
+    text-align: center;
+    gap: 50px;
 }
 /*botao colocar um stroke e uns paranaue louco*/
+#hero a{
+    position: relative;
+    display: inline-block;
+    color: white;
+    background-color: var(--destaque);
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    overflow: visible;
+    z-index: 1;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
+/*BORDA EXTERNA*/
+#hero a::before{
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    top: -10px;
+    left: -10px;
+    border-top: 5px solid var(--destaque);
+    border-left: 5px solid var(--fundosecundaria);
+    z-index: -1; /*segunda camada*/
+    transition: all 0.1s ease;
+    pointer-events: none;
+    opacity: 1;
+}
+#hero a::after{
+    content: "";
+    position: absolute;
+    height: 24px;
+    width: 24px;
+    bottom: -10px;
+    right: -10px;
+    border-bottom: 5px solid var(--fundosecundaria);
+    border-right: 5px solid var(--destaque);
+    z-index: -1; /*segunda camada*/
+    transition: all 0.1s ease;
+    pointer-events: none;
+    opacity: 1;
+}
+#hero a:hover{
+    color: #56b495;
+    text-shadow: 1px 1px 1px black;
+    background-color: transparent;
+    box-shadow: none;
+
+}
+#hero a:hover::before{
+    height: 132%;
+    width: 105%;
+    border-top: 5px solid var(--cordeapoio);
+    border-left: 5px solid var(--cordeapoio);
+    border-radius: 20px;
+}
+#hero a:hover::after{
+    height: 132%;
+    width: 105%;
+    border-bottom: 5px solid var(--cordeapoio);
+    border-right: 5px solid var(--cordeapoio);
+    border-radius: 20px;
+}
+
 #benefits{
     grid-area: benefits;
+    padding: 10px;
+    box-shadow: 0px 0px 10px black;
 }
 #testimonials{
     grid-area: testimonials;
+    padding: 10px;
+    box-shadow: 0px 0px 10px black;
+}
+#benefits h2,#testimonials h2{
+    color: var(--destaque);
+    text-align: center;
+    font-size: 1.3em;
+    text-shadow: 1px 1px 1px black;
 }
 footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
     padding: 10px;
     grid-area: footer;
     background-color: var(--fundosecundaria);
