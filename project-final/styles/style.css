@@ -34,16 +34,17 @@ html,body{
     background-color:var(--fundogeral);
 }
 
-.container{
+body{
     display: grid;
     grid-template-areas: 
-    "header header header"
-    "hero hero hero"
-    "benefits benefits benefits"
-    "testimonials testimonials testimonials"
-    "footer footer footer";
+    "header"
+    "hero"
+    "benefits"
+    "testimonials"
+    "inscricao"
+    "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: auto;
 }
 
 a{
@@ -85,7 +86,7 @@ header a:hover{
 }
 
 
-main{
+.container{
     color: var(--texto-icones);
     text-shadow: 0px 1px 1px rgba(46, 46, 46, 0.658);
     display: flex;
@@ -95,7 +96,7 @@ main{
     padding: 40px;
     font-size: 1.5rem;
 }
-main>p{
+.container p{
     font-size: 1.2rem;
     text-align: justify;
 }
@@ -130,7 +131,7 @@ main>p{
     box-shadow: 0px 0px 10px black;
     overflow: visible;
     z-index: 1;
-    transition: all 0.3 ease;
+    transition: all 0.3s ease;
     cursor: pointer;
 }
 /*BORDA EXTERNA*/
@@ -200,6 +201,73 @@ main>p{
     font-size: 1.3em;
     text-shadow: 1px 1px 1px black;
 }
+
+#inscricao{
+    grid-area: inscricao;
+    background-color: #f9f9f9;
+    padding: 40px;
+    margin: 40px 0px;
+    max-width: 700px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px black;
+}
+#inscricao h2{
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+#inscricao form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+#inscricao form fieldset{
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+}
+label{
+    display: block;
+    font-size: 1em;
+    margin-bottom: 4px;
+}
+input{
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 100%;
+    background-color: #f0f0f0;
+    transition: border-color 0.3s ease;
+}
+input:focus{
+    border-color: #4CAF50;
+    outline: none;
+}
+::placeholder{
+    padding: 10px;
+}
+button{
+    margin-top: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+button:hover{
+    background-color: #3e8e41;
+    color: white;
+    text-shadow: 0px 1px 1px rgb(54, 54, 54);
+}
+button:active{
+    background-color: #3e8e41;
+}
+
+
 footer{
     display: flex;
     justify-content: center;
@@ -214,4 +282,39 @@ footer a{
 footer a:hover{
     color: var(--destaque);
     transition: color 0.2 ease;
+}
+
+@media screen and (max-width:768px) {
+    header{
+        height: max-content;
+        padding: 0px;
+    }
+    ul{
+        flex-direction: column;
+    }
+    li{
+        width: 100%;
+        background-color: var(--fundosecundaria);
+        text-align: center;
+        padding: 10px 0px;
+        border: 1px solid var(--destaque);
+    }
+    li:hover{
+        cursor: pointer;
+        background-color: var(--destaque);
+    }
+    li:hover a{
+        color: white;
+        
+    }
+    li a{
+        text-shadow: 0px 1px 1px black;
+    }
+    header a:hover{
+        background-color: none;
+        box-shadow: none;
+    }
+    nav{
+        text-align: center;
+    }
 }

@@ -3,41 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curse Online</title>
+    <title>Curso Online</title>
     <link rel="stylesheet" href="styles/style.css">
     
 </head>
 <body>
-    <section class="container">
         <header>
-            <nav>
+            <nav aria-label="Navegação Principal">
                 <ul>
-                    <li><a href="#hero">OQUE É?</a></li>
+                    <li><a href="#hero">O QUE É?</a></li>
                     
-                    <li><a href="#benefits">BENEFICIOS</a></li>
+                    <li><a href="#benefits">BENEFÍCIOS</a></li>
                     
                     <li><a href="#testimonials">AVALIAÇÕES</a></li>
+
                 </ul>
             </nav>
         </header>
-        <main>
-            <section id="hero">INTRODUCAO
+        <main class="container">
+            <section id="hero">
+                <h1>INTRODUÇÃO AO CURSO ONLINE</h1>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora assumenda magnam reprehenderit. Quam laboriosam, saepe quisquam autem dolorem ratione animi ex numquam tempora ad incidunt explicabo odio, doloremque quae nostrum!</p>
-                <a href="#hero">COMEÇE AGORA</a>
+                <a href="#inscricao">COMECE AGORA</a>
             </section>
-            <section id="benefits"><h2>Benefícios</h2>
+            <section id="benefits">
+                <h2>Benefícios</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora assumenda magnam reprehenderit. Quam laboriosam, saepe quisquam autem dolorem ratione animi ex numquam tempora ad incidunt explicabo odio, doloremque quae nostrum!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora assumenda magnam reprehenderit. Quam laboriosam, saepe quisquam autem dolorem ratione animi ex numquam tempora ad incidunt explicabo odio, doloremque quae nostrum!</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora assumenda magnam reprehenderit. Quam laboriosam, saepe quisquam autem dolorem ratione animi ex numquam tempora ad incidunt explicabo odio, doloremque quae nostrum!</p>
             </section>
-            <section id="testimonials"><h2>Provas-sociais</h2>
+            <section id="testimonials">
+                <h2>AVALIAÇÕES DE CLIENTES</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora assumenda magnam reprehenderit. Quam laboriosam, saepe quisquam autem dolorem ratione animi ex numquam tempora ad incidunt explicabo odio, doloremque quae nostrum!</p>
+            </section>
+            <section id="inscricao">
+                <h2>Inscreva-se no Curso</h2>
+                <form action="#" method="post" autocomplete="on">
+                    <fieldset>
+                        <legend>Preencha os dados abaixo</legend>
+                        <div class="form-group">
+                            <label for="nome">Nome Completo:</label>
+                            <input type="text" name="nome" id="nome" required placeholder="Digite seu nome" autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="em">Email:</label>
+                            <input type="email" name="email" id="email" required placeholder="Digite seu e-mail" autocomplete="email">
+                        </div>
+                        <button type="submit">Inscrever-se</button>
+                    </fieldset>
+                </form>
             </section>
         </main>
         <footer>
             <p>&copy; <a href="https://github.com/AugustoMoraes07" >AUGUSTOMORAES07</a> Todos os direitos reservados</p>
         </footer>
-    </section>
-
 </body>
 </html>
