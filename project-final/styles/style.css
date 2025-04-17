@@ -281,7 +281,7 @@ footer a{
 }
 footer a:hover{
     color: var(--destaque);
-    transition: color 0.2 ease;
+    transition: color 0.2s ease;
 }
 
 @media screen and (max-width:768px) {
