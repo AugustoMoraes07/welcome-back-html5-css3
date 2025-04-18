@@ -24,7 +24,7 @@ Verde Menta	#10B981	Cor de apoio (destaques positivos, benefícios)*/
 }
 
 html{
-    scroll-behavior: smooth; /*scrool suave*/
+    scroll-behavior: smooth; /*scrool smoth*/
 }
 
 html,body{
@@ -48,6 +48,7 @@ body{
 }
 
 a{
+    display: block;
     font-weight: bold;
     text-decoration: none;
 }
@@ -119,7 +120,6 @@ header a:hover{
     text-align: center;
     gap: 50px;
 }
-/*botao colocar um stroke e uns paranaue louco*/
 #hero a{
     position: relative;
     display: inline-block;
@@ -255,8 +255,8 @@ button{
     text-align: center;
     border-radius: 8px;
     border: none;
-    transition: background-color 0.3s ease;
     width: 100%;
+    transition: background-color 0.3s ease;
 }
 button:hover{
     background-color: #3e8e41;
@@ -278,10 +278,10 @@ footer{
 }
 footer a{
     color: var(--cor-principal);
+    transition: color 0.2s ease;
 }
 footer a:hover{
     color: var(--destaque);
-    transition: color 0.2s ease;
 }
 
 @media screen and (max-width:768px) {
@@ -311,8 +311,8 @@ footer a:hover{
         text-shadow: 0px 1px 1px black;
     }
     header a:hover{
-        background-color: none;
         box-shadow: none;
+        background-color: none;
     }
     nav{
         text-align: center;
